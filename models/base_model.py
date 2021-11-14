@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""The BaseModel takes care of the initialization, serialization and deserialization"""
+""" The BaseModel takes care of the initialization, serialization
+    and deserialization
+"""
 import uuid
 from datetime import datetime
 import models
@@ -12,8 +14,8 @@ class BaseModel:
         use uuid.uuid4() to generate unique id(needs to be convert to a string)
         the goal is to have a unique id for each BaseModel
     created_at: assign with the current datetime when the instance is created
-    updated_at: assign with the current datetime when an instance is created and it
-    will be updated every time you change your object
+    updated_at: assign with the current datetime when an instance is created
+    and it will be updated every time you change your object
     """
 
     def __init__(self, *args, **kwargs):
@@ -33,7 +35,8 @@ class BaseModel:
             models.engine.file_storage.new(self)
 
     def __str__(self):
-        return '[{0}] ({1}) {2}'.format(self.__class__.__name__, self.id, self.__dict__)
+        return '[{0}] ({1}) {2}'.format(self.__class__.__name__,
+                                        self.id, self.__dict__)
 
     def save(self):
         """updates the public instance attribute updated_at"""
