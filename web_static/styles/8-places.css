@@ -70,3 +70,14 @@ article h2 {
 	font-size: 30px;
 	margin: 0px 0px 0px auto;
 }
+
+.tag{
+	float: right;
+	position: relative;
+	right: 50px;
+	bottom: 395px;
+}
+
+.shift{
+	left: 80px;
+}
